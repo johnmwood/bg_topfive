@@ -1,11 +1,5 @@
 # Board Game Top Five (bgtf)
 
-## Purpose
-
-- Build something simple from start to finish that I enjoy working on
-- Practice programming
-- Build confidence in skillset
-
 ## Core features
 
 ### Search for top five board game videos associated with board game text search
