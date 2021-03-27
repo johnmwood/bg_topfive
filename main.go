@@ -6,23 +6,24 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
-	"github.com/johnmwood/bgtopfive/api/youtube"
+
+	"github.com/johnmwood/bgtopfive/youtubeapi"
 )
 
-func homeHandler(w http.ResponseWriter, r *http.Request) {
+func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome to Board Game Top Five")
 	fmt.Println("Hit endpoint: homepage")
 }
 
-func handleRequests() {
+func HandleRequests() {
 	router := mux.NewRouter().StrictSlash(true)
 
-	router.HandleFunc("/", homeHandler)
+	router.HandleFunc("/", HomeHandler)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
 func main() {
-	youtube.SetYoutubeConfig()
-	handleRequests()
+	youtubeapi.SetConfig()
+	HandleRequests()
 }

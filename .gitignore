@@ -1,4 +1,2 @@
-api/youtube/secrets.json
-api/youtube/ytkey.txt
-api/go.mod
-api/go.sum
+youtubeapi/secrets.json
+youtubeapi/ytkey.txt

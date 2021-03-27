@@ -1,4 +1,4 @@
-package youtube
+package youtubeapi
 
 import (
 	"fmt"
@@ -7,9 +7,9 @@ import (
 	"os"
 )
 
-func SetYoutubeConfig() {
-	file, err := os.Open("ytkey.txt")
-	if err = file.Close(); err != nil {
+func SetConfig() {
+	file, err := os.Open("./youtubeapi/ytkey.txt")
+	if err != nil {
 		log.Fatal(err)
 	}
 
